@@ -1,0 +1,9 @@
+@import '../../../shared/styles.scss';
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    color: $font-color;
+}

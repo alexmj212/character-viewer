@@ -1,0 +1,21 @@
+@import '../../../shared/styles.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    ul {
+        list-style: none;
+        li {
+            font-size: 20px;
+            a {
+                color: $font-color;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
