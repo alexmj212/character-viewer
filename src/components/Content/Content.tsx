@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Content.module.scss';
+import Character from '../Character/Character';
 
 class Content extends React.Component {
     render() {
         return (
-            <section className={styles.content}>
-                Hello Content
-            </section>
+            <article className={styles.content}>
+                <Character />
+            </article>
         )
     }
 }

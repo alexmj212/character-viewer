@@ -2,8 +2,14 @@
 
 .content {
     display: flex;
-    align-items: center;
+    flex: 1;
+    align-items: flex-start;
     justify-content: center;
-    margin: 20px;
-    color: $font-color;
+    background-color: #fff;
+    color: #555;
+    width: calc(100vw - 200px);
+    max-width: 1000px;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
 }
