@@ -1,11 +1,12 @@
 .backstory {
-    width: 100%;
     height: 100%;
     margin: 20px;
     min-height: 100%;
     text-align: justify;
     font-family: 'Libre Baskerville', serif;
+    flex: 1;
     p {
+        text-indent: 50px;
         line-height: 1.5em;
         word-spacing: 2px;
         font-size: 13px;
