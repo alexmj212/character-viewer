@@ -1,2 +1,15 @@
 $background-color: #555;
 $font-color: #fff;
+
+.sheetModule {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .sheetModule {
+        margin: 0 10px;
+    }
+}

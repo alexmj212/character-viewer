@@ -5,71 +5,119 @@ class Stats extends React.Component {
     render() {
         return (
             <div className={styles.stats}>
-                <div className={styles.value}>
-                    <div className={styles.score}>
-                        <div className={styles.type}>
-                            STR
+                <div className={styles.group}>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                STR
                             </div>
-                        20
+                            20
                         </div>
-                    <div className={styles.modifier}>
-                        +5
+                        <div className={styles.modifier}>
+                            +5
                         </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                DEX
+                            </div>
+                            20
+                        </div>
+                        <div className={styles.modifier}>
+                            +5
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                CON
+                            </div>
+                            20
+                        </div>
+                        <div className={styles.modifier}>
+                            +5
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                INT
+                            </div>
+                            20
+                        </div>
+                        <div className={styles.modifier}>
+                            +5
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                WIS
+                            </div>
+                            20
+                        </div>
+                        <div className={styles.modifier}>
+                            +5
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                CHA
+                            </div>
+                            20
+                        </div>
+                        <div className={styles.modifier}>
+                            +5
+                        </div>
+                    </div>
                 </div>
-                <div className={styles.value}>
-                    <div className={styles.score}>
-                        <div className={styles.type}>
-                            DEX
+                <div className={styles.group}>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                Hit Points
                             </div>
-                        20
-                        </div>
-                    <div className={styles.modifier}>
-                        +5
-                        </div>
-                </div>
-                <div className={styles.value}>
-                    <div className={styles.score}>
-                        <div className={styles.type}>
-                            CON
+                            <div className={styles.complexGroup}>100/100</div>
+                            <div className={styles.type}>
+                                Hit Die
                             </div>
-                        20
+                            <div className={styles.complexGroup}>d6</div>
                         </div>
-                    <div className={styles.modifier}>
-                        +5
-                        </div>
-                </div>
-                <div className={styles.value}>
-                    <div className={styles.score}>
-                        <div className={styles.type}>
-                            INT
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                Proficiency
                             </div>
-                        20
+                            +2
                         </div>
-                    <div className={styles.modifier}>
-                        +5
-                        </div>
-                </div>
-                <div className={styles.value}>
-                    <div className={styles.score}>
-                        <div className={styles.type}>
-                            WIS
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                Initiative
                             </div>
-                        20
+                            +2
                         </div>
-                    <div className={styles.modifier}>
-                        +5
-                        </div>
-                </div>
-                <div className={styles.value}>
-                    <div className={styles.score}>
-                        <div className={styles.type}>
-                            CHA
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                Armor Class
                             </div>
-                        20
+                            20
                         </div>
-                    <div className={styles.modifier}>
-                        +5
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                Movement
+                            </div>
+                            <span className={styles.unitGroup}>30<span className={styles.unitName}>ft</span></span>
                         </div>
+                    </div>
                 </div>
             </div>
         )

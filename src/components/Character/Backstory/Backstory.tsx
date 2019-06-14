@@ -4,7 +4,7 @@ import styles from './Backstory.module.scss';
 class Backstory extends React.Component {
     render() {
         return (
-            <div className={styles.backstory}>
+            <div className={`${styles.sheetModule} ${styles.backstory}`}>
                 <h2>Backstory</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium vulputate sapien nec sagittis aliquam malesuada. Vitae ultricies leo integer malesuada nunc. Ultricies lacus sed turpis tincidunt. Odio ut sem nulla pharetra diam sit amet nisl. Nisi lacus sed viverra tellus in. Vel facilisis volutpat est velit. Tellus at urna condimentum mattis pellentesque id. Amet nisl suscipit adipiscing bibendum est ultricies integer. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Sed augue lacus viverra vitae.</p>
 

@@ -5,13 +5,12 @@
     align-items: center;
     justify-content: center;
     margin: 20px;
-    height: 100px;
+    color: $font-color;
     ul {
         list-style: none;
         li {
             font-size: 20px;
             a {
-                color: $font-color;
                 text-decoration: none;
                 &:hover {
                     text-decoration: underline;

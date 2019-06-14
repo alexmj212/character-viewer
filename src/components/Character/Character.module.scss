@@ -1,15 +1,25 @@
+@import '../../../shared/styles.scss';
+
 .character {
     display: flex;
     flex-direction: column;
     .info {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
         width: 100%;
         min-height: 100%;
+        .col {
+            width: 50%;
+        }
     }
     @media (max-width: 768px) {
         .info {
             flex-direction: column;
+            .col {
+                width: 100%;
+            }
         }
     }
 }

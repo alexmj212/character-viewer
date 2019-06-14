@@ -5,11 +5,7 @@ class Header extends React.Component {
     render() {
         return (
             <header className={styles.header}>
-                <ul>
-                    <li>
-                        <a href="https://alexmj212.dev/">alexmj212</a>
-                    </li>
-                </ul>
+                <h1>Character Viewer</h1>
             </header>
         )
     }

@@ -1,45 +1,71 @@
 .stats {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     margin-bottom: 5px;
     justify-content: space-around;
-    .value {
+    .group {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: 1px solid #555;
-        border-radius: 5px;
-        background-color: #fff;
-        height: 75px;
-        max-width: 50px;
-        margin: 10px;
-        flex: 1;
-        @media (max-width: 768px) {
-            max-width: 60px;
-            flex-basis: 33%;
-        }
-        .score {
-            flex: 1;
-            justify-content: center;
-            font-size: 35px;
-            font-weight: bold;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .value {
             display: flex;
             flex-direction: column;
-            .type {
-                font-size: 10px;
-                margin-bottom: -5px;
+            align-items: center;
+            flex: 1 0 auto;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #fff;
+            height: 75px;
+            margin: 10px;
+            padding: 0 5px;
+            .score {
+                flex: 1;
+                justify-content: center;
+                font-size: 35px;
+                font-weight: bold;
+                display: flex;
+                flex-direction: column;
+                word-wrap: none;
+                .type {
+                    font-size: 10px;
+                    margin-bottom: -5px;
+                }
+                .complexGroup {
+                    font-size: 20px;
+                }
+                .unitGroup {
+                    flex-direction: row;
+                    .unitName {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .modifier {
+                width: 25px;
+                height: 25px;
+                border: 1px solid #444;
+                background-color: #fff;
+                border-radius: 100%;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 3px;
             }
         }
-        .modifier {
-            width: 25px;
-            height: 25px;
-            border: 1px solid #444;
-            background-color: #fff;
-            border-radius: 100%;
-            font-size: 15px;
-            font-weight: bold;
-            padding: 3px;
+        @media (max-width: 1024px) {
+            .value {
+                flex-basis: 24%;
+            }
+        }
+        @media (max-width: 767px) {
+            .value {
+                flex-basis: 25%;
+            }
+        }
+        @media (max-width: 414px) {
+            .value {
+                flex-basis: 20%;
+            }
         }
     }
 }
