@@ -3,6 +3,8 @@ import styles from './Character.module.scss';
 import Details from './Details/Details';
 import Backstory from './Backstory/Backstory'
 import Basic from './Basic/Basic';
+import Race from './Race/Race';
+import Class from './Class/Class';
 
 class Character extends React.Component {
     render() {
@@ -17,12 +19,8 @@ class Character extends React.Component {
                         <Details />
                     </div>
                     <div className={styles.col}>
-                        <div className={styles.sheetModule}>
-                            <h2>Race</h2>
-                        </div>
-                        <div className={styles.sheetModule}>
-                            <h2>Class</h2>
-                        </div>
+                        <Race />
+                        <Class />
                         <Backstory />
                     </div>
                 </div>

@@ -2,76 +2,37 @@ import React from 'react';
 import styles from './Stats.module.scss';
 
 class Stats extends React.Component {
+
+    randomStat(abilityName: string) {
+        let stat = (Math.floor(Math.random() * 20));
+        let modifier = Math.floor((stat - 10)/2);
+        return (
+            <div className={styles.value}>
+                <div className={styles.score}>
+                    <div className={styles.type}>
+                        { abilityName }
+                    </div>
+                    <div className={styles.stat}>
+                        { stat }
+                    </div>
+                </div>
+                <div className={styles.modifier}>
+                    { modifier > 0 ? '+' + modifier : modifier }
+                </div>
+            </div>
+        );
+    }
+
     render() {
         return (
             <div className={styles.stats}>
                 <div className={styles.group}>
-                    <div className={styles.value}>
-                        <div className={styles.score}>
-                            <div className={styles.type}>
-                                STR
-                            </div>
-                            20
-                        </div>
-                        <div className={styles.modifier}>
-                            +5
-                        </div>
-                    </div>
-                    <div className={styles.value}>
-                        <div className={styles.score}>
-                            <div className={styles.type}>
-                                DEX
-                            </div>
-                            20
-                        </div>
-                        <div className={styles.modifier}>
-                            +5
-                        </div>
-                    </div>
-                    <div className={styles.value}>
-                        <div className={styles.score}>
-                            <div className={styles.type}>
-                                CON
-                            </div>
-                            20
-                        </div>
-                        <div className={styles.modifier}>
-                            +5
-                        </div>
-                    </div>
-                    <div className={styles.value}>
-                        <div className={styles.score}>
-                            <div className={styles.type}>
-                                INT
-                            </div>
-                            20
-                        </div>
-                        <div className={styles.modifier}>
-                            +5
-                        </div>
-                    </div>
-                    <div className={styles.value}>
-                        <div className={styles.score}>
-                            <div className={styles.type}>
-                                WIS
-                            </div>
-                            20
-                        </div>
-                        <div className={styles.modifier}>
-                            +5
-                        </div>
-                    </div>
-                    <div className={styles.value}>
-                        <div className={styles.score}>
-                            <div className={styles.type}>
-                                CHA
-                            </div>
-                            20
-                        </div>
-                        <div className={styles.modifier}>
-                            +5
-                        </div>
-                    </div>
+                    { this.randomStat('STR') }
+                    { this.randomStat('DEX') }
+                    { this.randomStat('CON') }
+                    { this.randomStat('WIS') }
+                    { this.randomStat('INT') }
+                    { this.randomStat('CHA') }
                 </div>
                 <div className={styles.group}>
                     <div className={styles.value}>
@@ -91,7 +52,9 @@ class Stats extends React.Component {
                             <div className={styles.type}>
                                 Proficiency
                             </div>
-                            +2
+                            <div className={styles.stat}>
+                                +2
+                            </div>
                         </div>
                     </div>
                     <div className={styles.value}>
@@ -99,7 +62,9 @@ class Stats extends React.Component {
                             <div className={styles.type}>
                                 Initiative
                             </div>
-                            +2
+                            <div className={styles.stat}>
+                                +2
+                            </div>
                         </div>
                     </div>
                     <div className={styles.value}>
@@ -107,7 +72,9 @@ class Stats extends React.Component {
                             <div className={styles.type}>
                                 Armor Class
                             </div>
-                            20
+                            <div className={styles.stat}>
+                                20
+                            </div>
                         </div>
                     </div>
                     <div className={styles.value}>

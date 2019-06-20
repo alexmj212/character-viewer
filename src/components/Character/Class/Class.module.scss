@@ -1,0 +1,43 @@
+@import "../../../../shared/styles.scss";
+
+.class {
+    .data {
+        display: flex;
+        flex-direction: row;
+
+        .description {
+            flex: 1 0 50%;
+            p {
+                margin-top: 0;
+                font-family: 'Libre Baskerville', serif;
+                line-height: 1.5em;
+                word-spacing: 2px;
+                font-size: 13px;
+            }
+        }
+        .info {
+            flex: 1 0 50%;
+            dl {
+                margin: 0;
+                padding: 0;
+
+                font-size: 13px;
+                dt {
+                    margin: 0;
+                    padding: 0;
+                    float: left;
+                    font-weight: bold;
+                    &::after {
+                        content: ":";
+                    }
+                    margin-right: 0.5em;
+                }
+                dd {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+        }
+    }
+}
