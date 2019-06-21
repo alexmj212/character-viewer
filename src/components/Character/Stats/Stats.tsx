@@ -1,38 +1,103 @@
 import React from 'react';
 import styles from './Stats.module.scss';
+import { BaseStats } from '../../../interfaces/Stats.interface';
+import { AbilitiesAbrv } from '../../../enums/Abilites.enum';
+import { BaseClassInterface } from '../../../interfaces/Class.interface';
 
-class Stats extends React.Component {
+export interface StatsProps {
+    baseStats: BaseStats;
+    baseClass: BaseClassInterface;
+}
 
-    randomStat(abilityName: string) {
-        let stat = (Math.floor(Math.random() * 20));
-        let modifier = Math.floor((stat - 10)/2);
-        return (
-            <div className={styles.value}>
-                <div className={styles.score}>
-                    <div className={styles.type}>
-                        { abilityName }
-                    </div>
-                    <div className={styles.stat}>
-                        { stat }
-                    </div>
-                </div>
-                <div className={styles.modifier}>
-                    { modifier > 0 ? '+' + modifier : modifier }
-                </div>
-            </div>
-        );
+class Stats extends React.Component<StatsProps> {
+
+    calcModifier(stat: number): string {
+        let value = Math.floor((stat - 10) / 2);
+        return value > 0 ? '+' + value.toString() : value.toString();
     }
 
     render() {
         return (
             <div className={styles.stats}>
                 <div className={styles.group}>
-                    { this.randomStat('STR') }
-                    { this.randomStat('DEX') }
-                    { this.randomStat('CON') }
-                    { this.randomStat('WIS') }
-                    { this.randomStat('INT') }
-                    { this.randomStat('CHA') }
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                {AbilitiesAbrv.STR}
+                            </div>
+                            <div className={styles.stat}>
+                                {this.props.baseStats.STR}
+                            </div>
+                        </div>
+                        <div className={styles.modifier}>
+                            {this.calcModifier(this.props.baseStats.STR)}
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                {AbilitiesAbrv.DEX}
+                            </div>
+                            <div className={styles.stat}>
+                                {this.props.baseStats.DEX}
+                            </div>
+                        </div>
+                        <div className={styles.modifier}>
+                            {this.calcModifier(this.props.baseStats.DEX)}
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                {AbilitiesAbrv.CON}
+                            </div>
+                            <div className={styles.stat}>
+                                {this.props.baseStats.CON}
+                            </div>
+                        </div>
+                        <div className={styles.modifier}>
+                            {this.calcModifier(this.props.baseStats.CON)}
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                {AbilitiesAbrv.WIS}
+                            </div>
+                            <div className={styles.stat}>
+                                {this.props.baseStats.WIS}
+                            </div>
+                        </div>
+                        <div className={styles.modifier}>
+                            {this.calcModifier(this.props.baseStats.WIS)}
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                {AbilitiesAbrv.INT}
+                            </div>
+                            <div className={styles.stat}>
+                                {this.props.baseStats.INT}
+                            </div>
+                        </div>
+                        <div className={styles.modifier}>
+                            {this.calcModifier(this.props.baseStats.INT)}
+                        </div>
+                    </div>
+                    <div className={styles.value}>
+                        <div className={styles.score}>
+                            <div className={styles.type}>
+                                {AbilitiesAbrv.CHA}
+                            </div>
+                            <div className={styles.stat}>
+                                {this.props.baseStats.CHA}
+                            </div>
+                        </div>
+                        <div className={styles.modifier}>
+                            {this.calcModifier(this.props.baseStats.CHA)}
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.group}>
                     <div className={styles.value}>
@@ -44,7 +109,7 @@ class Stats extends React.Component {
                             <div className={styles.type}>
                                 Hit Die
                             </div>
-                            <div className={styles.complexGroup}>d6</div>
+                            <div className={styles.complexGroup}>d{this.props.baseClass.hitDie}</div>
                         </div>
                     </div>
                     <div className={styles.value}>
@@ -63,7 +128,7 @@ class Stats extends React.Component {
                                 Initiative
                             </div>
                             <div className={styles.stat}>
-                                +2
+                                { this.calcModifier(this.props.baseStats.DEX) }
                             </div>
                         </div>
                     </div>
