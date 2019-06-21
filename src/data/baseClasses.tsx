@@ -1,4 +1,5 @@
-import { BaseClassInterface, Abilities } from '../interfaces/class.interface';
+import { BaseClassInterface } from '../interfaces/Class.interface';
+import { Abilities } from '../enums/Abilites.enum';
 
 export default class BaseClasses {
 
